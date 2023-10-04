@@ -42,6 +42,7 @@ fun PostView(
     postViewModel: PostViewModel,
     loadPost: () -> Unit
 ) {
+
     loadPost()
 
     Scaffold(
