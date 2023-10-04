@@ -12,6 +12,10 @@ import androidx.navigation.compose.rememberNavController
 import space.stanton.technicaltest.brightones.features.post.ui.PostScreen
 import space.stanton.technicaltest.brightones.ui.theme.BrightonesTheme
 
+/**
+ * Please carefully read the README, in the root project directory,
+ * in order to complete this tech task.
+ */
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
