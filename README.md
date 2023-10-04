@@ -3,8 +3,9 @@
 This project forms the basis for the technical task for Android developer applicants.
 Please carefully read these instructions before beginning the task.
 
-* The task should take around 6 hours to complete
+* The task should no more than 6 hours to complete
 * You are welcome to consult the internet, documentation or code you have written to help you
+* We encourage you to use tools like the debugger and Layout Inspector to diagnose issues.
 
 *We will assess you on:*
 
@@ -34,9 +35,12 @@ code.
 that needs to be fixed or improved.
 2. Pick 2 or 3 of these issues and implement fixes / improvements.
     - Feel free to refactor and change the architecture of the code
-    - You are welcome to add / change 3rd party libraries but you shouldn't need to
-3. We would like to see one example of a *Unit* test and one example of an *Instrumented test*
-4. Add additional comments (either inline or in a separate file) to outline what further improvements
+    - You can add 3rd party libraries, but shouldn't need to (be prepared to explain your choices)
+3. Implement a simple post detail screen 
+4. We would like to see
+      a) an example of a *Unit* test
+      b) an example of an *Instrumented test*
+5. Add additional comments (either inline or in a separate file) to outline what further improvements
 you might make if you had a few days to work on the code.
 
 ## The API
