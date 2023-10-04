@@ -3,7 +3,7 @@
 This project forms the basis for the technical task for Android developer applicants.
 Please carefully read these instructions before beginning the task.
 
-* The task should no more than 6 hours to complete
+* The task should no more than 3 hours to complete
 * You are welcome to consult the internet, documentation or code you have written to help you
 * We encourage you to use tools like the debugger and Layout Inspector to diagnose issues.
 
@@ -21,11 +21,10 @@ Please carefully read these instructions before beginning the task.
 
 This project uses the JSON placeholder API to display a list of posts. 
 The list includes the title of each post and an
-excerpt from each post's body. Tapping a post should open a post details screen that
-displays the title and complete body of the post.
+excerpt from each post's body.
 
 The code of the starting application is *deliberately poor* and contains
-several examples of *bad practice* according to Modern Android Development.
+*bugs* and several examples of *bad practice* according to Modern Android Development.
 This is to give you the opportunity to demonstrate how you would tackle improving legacy
 code.
 
@@ -36,12 +35,8 @@ that needs to be fixed or improved.
 2. Pick 2 or 3 of these issues and implement fixes / improvements.
     - Feel free to refactor and change the architecture of the code
     - You can add 3rd party libraries, but shouldn't need to (be prepared to explain your choices)
-3. Implement a simple post detail screen 
-4. We would like to see
-      a) an example of a *Unit* test
-      b) an example of an *Instrumented test*
-5. Add additional comments (either inline or in a separate file) to outline what further improvements
-you might make if you had a few days to work on the code.
+3. We would like to see an example of a *Unit* test
+4. Suggest other improvements you might make if you had a few days to work on the code.
 
 ## The API
 
