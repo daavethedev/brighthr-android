@@ -6,13 +6,13 @@ Please carefully read these instructions before beginning the task.
 * The task should take around 6 hours to complete
 * You are welcome to consult the internet, documentation or code you have written to help you
 
-We will be assess you on:
+*We will assess you on:*
 
 * Understanding of best practices in Android development
 * Clear code organisation
 * The size and message of git commits
 
-We are less concerned with:
+*We are less concerned with:*
 
 * UI styling / animation etc.
 
