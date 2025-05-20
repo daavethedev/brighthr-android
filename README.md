@@ -4,7 +4,7 @@ This project forms the basis for the technical task for Android developer applic
 Please CAREFULLY read ALL these instructions before beginning the task.
 
 The starting code of the application is *DELIBERATELY BAD* - it will not function correctly
-in its current state. The code contains*bugs* and several examples of *bad practice* 
+in its current state. The code contains *bugs* and several examples of *bad practice* 
 according to Modern Android Development.
 This gives you the opportunity to demonstrate your ability to fix and improve
 badly-written legacy code.
