@@ -1,8 +1,8 @@
-package space.stanton.technicaltest.brightones.features.post.repository
+package com.brighthr.technicaltest.brightones.features.post.repository
 
 import retrofit2.http.GET
 import retrofit2.http.Path
-import space.stanton.technicaltest.brightones.features.post.model.Post
+import com.brighthr.technicaltest.brightones.features.post.model.Post
 
 interface PostService {
     @GET("posts")

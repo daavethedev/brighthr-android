@@ -1,4 +1,4 @@
-package space.stanton.technicaltest.brightones.features.post.ui
+package com.brighthr.technicaltest.brightones.features.post.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -6,8 +6,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -17,12 +17,14 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import space.stanton.technicaltest.brightones.features.post.model.Post
-import space.stanton.technicaltest.brightones.features.post.viewmodel.PostViewModel
+import com.brighthr.technicaltest.brightones.features.post.model.Post
+import com.brighthr.technicaltest.brightones.features.post.viewmodel.PostViewModel
 
 @Composable
-fun PostScreen(modifier: Modifier = Modifier) {
-    val viewModel = PostViewModel()
+fun PostScreen(
+    modifier: Modifier = Modifier,
+    viewModel : PostViewModel = PostViewModel(),
+) {
 
     val posts by viewModel.posts.collectAsState()
 
@@ -57,7 +59,7 @@ fun PostView(
         ) {
             posts.filter { it.body != null }.sortedBy { it.id }.forEach {
                 PostView(post = it, postViewModel = postViewModel)
-                Divider(modifier = Modifier.padding(top = 8.dp, bottom = 16.dp))
+                HorizontalDivider(modifier = Modifier.padding(top = 8.dp, bottom = 16.dp))
             }
         }
     }

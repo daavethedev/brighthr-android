@@ -1,4 +1,4 @@
-package space.stanton.technicaltest.brightones
+package com.brighthr.technicaltest.brightones
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

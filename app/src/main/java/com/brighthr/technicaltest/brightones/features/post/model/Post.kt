@@ -1,4 +1,4 @@
-package space.stanton.technicaltest.brightones.features.post.model
+package com.brighthr.technicaltest.brightones.features.post.model
 
 class Post (
     val id: Int,

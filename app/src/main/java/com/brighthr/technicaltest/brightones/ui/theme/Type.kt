@@ -1,4 +1,4 @@
-package space.stanton.technicaltest.brightones.ui.theme
+package com.brighthr.technicaltest.brightones.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

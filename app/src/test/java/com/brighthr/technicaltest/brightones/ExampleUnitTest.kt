@@ -1,4 +1,4 @@
-package space.stanton.technicaltest.brightones
+package com.brighthr.technicaltest.brightones
 
 import org.junit.Test
 

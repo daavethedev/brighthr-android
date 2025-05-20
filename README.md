@@ -1,9 +1,15 @@
 # Bright Android Technical Test 2023
 
 This project forms the basis for the technical task for Android developer applicants.
-Please carefully read these instructions before beginning the task.
+Please CAREFULLY read ALL these instructions before beginning the task.
 
-* The task should no more than 3 hours to complete
+The starting code of the application is *DELIBERATELY BAD* - it will not function correctly
+in its current state. The code contains*bugs* and several examples of *bad practice* 
+according to Modern Android Development.
+This gives you the opportunity to demonstrate your ability to fix and improve
+badly-written legacy code.
+
+* The task should take around 3 hours to complete
 * You are welcome to consult the internet, documentation or code you have written to help you
 * We encourage you to use tools like the debugger and Layout Inspector to diagnose issues.
 
@@ -23,19 +29,14 @@ This project uses the JSON placeholder API to display a list of posts.
 The list includes the title of each post and an
 excerpt from each post's body.
 
-The code of the starting application is *deliberately poor* and contains
-*bugs* and several examples of *bad practice* according to Modern Android Development.
-This is to give you the opportunity to demonstrate how you would tackle improving legacy
-code.
-
 ## Your task:
 
 1. Survey the code in this project and leave comments under everything you notice 
 that needs to be fixed or improved.
 2. Pick 2 or 3 of these issues and implement fixes / improvements.
     - Feel free to refactor and change the architecture of the code
-    - You can add 3rd party libraries, but shouldn't need to (be prepared to explain your choices)
-3. We would like to see an example of a *Unit* test
+    - You can add 3rd party libraries if you wish (be prepared to explain your choices)
+3. We would like to see at least one example of either a *Unit* test or a *compose* UI test
 4. Suggest other improvements you might make if you had a few days to work on the code.
 
 ## The API
