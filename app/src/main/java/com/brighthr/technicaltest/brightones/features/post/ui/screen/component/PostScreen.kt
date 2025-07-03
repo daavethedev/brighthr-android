@@ -1,4 +1,4 @@
-package com.brighthr.technicaltest.brightones.features.post.ui
+package com.brighthr.technicaltest.brightones.features.post.ui.screen.component
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -23,7 +23,7 @@ import com.brighthr.technicaltest.brightones.features.post.viewmodel.PostViewMod
 @Composable
 fun PostScreen(
     modifier: Modifier = Modifier,
-    viewModel : PostViewModel = PostViewModel(),
+    viewModel: PostViewModel = PostViewModel(),
 ) {
 
     val posts by viewModel.posts.collectAsState()
@@ -39,23 +39,19 @@ fun PostScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PostView(
-    modifier: Modifier,
-    posts: List<Post>,
-    postViewModel: PostViewModel,
-    loadPost: () -> Unit
+    modifier: Modifier, posts: List<Post>, postViewModel: PostViewModel, loadPost: () -> Unit
 ) {
 
     loadPost()
 
     Scaffold(
-        modifier = modifier,
-        topBar = {
+        modifier = modifier, topBar = {
             TopAppBar(title = { Text(text = "Post List") })
-        }
-    ) { padding ->
-        Column(modifier = Modifier
-            .fillMaxSize()
-            .padding(padding)
+        }) { padding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
         ) {
             posts.filter { it.body != null }.sortedBy { it.id }.forEach {
                 PostView(post = it, postViewModel = postViewModel)
@@ -67,19 +63,14 @@ fun PostView(
 
 @Composable
 fun PostView(post: Post, postViewModel: PostViewModel) {
-
-    Column(
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-        modifier = Modifier
-            .clickable {
-                postViewModel.navigateToDetail()
-            }
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp)
-    ) {
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier
+        .clickable {
+            postViewModel.navigateToDetail()
+        }
+        .fillMaxWidth()
+        .padding(horizontal = 16.dp)) {
         Text(
-            text = post.title,
-            style = MaterialTheme.typography.titleSmall
+            text = post.title, style = MaterialTheme.typography.titleSmall
         )
         post.body?.let {
             Text(text = it)

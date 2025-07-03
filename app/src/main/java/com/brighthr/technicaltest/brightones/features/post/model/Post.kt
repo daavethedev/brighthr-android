@@ -1,6 +1,6 @@
 package com.brighthr.technicaltest.brightones.features.post.model
 
-class Post (
+class Post(
     val id: Int,
     val userId: Int,
     val title: String,

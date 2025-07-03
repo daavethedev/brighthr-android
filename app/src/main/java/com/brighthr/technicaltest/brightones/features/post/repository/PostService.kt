@@ -1,8 +1,8 @@
 package com.brighthr.technicaltest.brightones.features.post.repository
 
+import com.brighthr.technicaltest.brightones.features.post.model.Post
 import retrofit2.http.GET
 import retrofit2.http.Path
-import com.brighthr.technicaltest.brightones.features.post.model.Post
 
 interface PostService {
     @GET("posts")

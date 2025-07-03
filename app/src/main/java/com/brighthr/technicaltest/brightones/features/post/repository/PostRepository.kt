@@ -1,9 +1,9 @@
 package com.brighthr.technicaltest.brightones.features.post.repository
 
+import com.brighthr.technicaltest.brightones.features.post.model.Post
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import com.brighthr.technicaltest.brightones.features.post.model.Post
 
 class PostRepository {
 

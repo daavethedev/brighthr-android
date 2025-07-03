@@ -2,15 +2,15 @@ package com.brighthr.technicaltest.brightones.features.post.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.brighthr.technicaltest.brightones.features.post.model.Post
+import com.brighthr.technicaltest.brightones.features.post.repository.PostRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
-import com.brighthr.technicaltest.brightones.features.post.model.Post
-import com.brighthr.technicaltest.brightones.features.post.repository.PostRepository
 import javax.inject.Inject
 
 @HiltViewModel
-class PostViewModel @Inject constructor(): ViewModel() {
+class PostViewModel @Inject constructor() : ViewModel() {
 
     private val postRepository = PostRepository()
 
