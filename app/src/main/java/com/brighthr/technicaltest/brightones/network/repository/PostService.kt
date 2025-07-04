@@ -1,4 +1,4 @@
-package com.brighthr.technicaltest.brightones.features.post.repository
+package com.brighthr.technicaltest.brightones.network.repository
 
 import com.brighthr.technicaltest.brightones.features.post.model.Post
 import retrofit2.http.GET

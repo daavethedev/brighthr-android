@@ -9,20 +9,28 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.brighthr.technicaltest.brightones.features.post.ui.screen.PostScreen
+import com.brighthr.technicaltest.brightones.ui.navgraph.NavGraph
+import com.brighthr.technicaltest.brightones.features.post.ui.postlist.PostScreen
 import com.brighthr.technicaltest.brightones.ui.theme.BrightonesTheme
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * Please carefully read the README, in the root project directory,
  * in order to complete this tech task.
  */
-class MainActivity : ComponentActivity() {
 
+
+/**
+ * Updated the Navigation to add a NavGraph, which is maintained in a separate file.
+ */
+@AndroidEntryPoint
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             BrightonesTheme {
-                MainNavigation()
+                val navController = rememberNavController()
+                NavGraph(navController = navController)
             }
         }
     }
@@ -32,7 +40,7 @@ class MainActivity : ComponentActivity() {
         val navHostController = rememberNavController()
         NavHost(navController = navHostController, startDestination = "post") {
             composable(route = "post") {
-                PostScreen(modifier = Modifier.fillMaxSize())
+                PostScreen(modifier = Modifier.fillMaxSize(), navController = navHostController)
             }
         }
     }

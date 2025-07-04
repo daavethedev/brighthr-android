@@ -4,8 +4,9 @@ import com.brighthr.technicaltest.brightones.features.post.model.Post
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Inject
 
-class PostRepository {
+class PostRepository @Inject constructor() {
 
     private val builder: Retrofit.Builder = Retrofit.Builder()
         .baseUrl("https://jsonplaceholder.typicode.com/")
@@ -21,5 +22,4 @@ class PostRepository {
     suspend fun retrieveAllPosts(): List<Post> {
         return retrofit.create(PostService::class.java).retrieveAllPosts()
     }
-
 }
