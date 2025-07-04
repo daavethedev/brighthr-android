@@ -11,6 +11,12 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+/*
+*
+* Added Network Module to provide Retrofit instances as it was being created for each and
+* every network call. This consumes less memory and make the App light weight.
+*
+* */
 @Module
 @InstallIn(SingletonComponent::class)
 class NetworkModule {

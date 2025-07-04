@@ -12,9 +12,14 @@ import javax.inject.Inject
 
 
 /*
+* MAJOR CHANGES on the ViewModel
 * Updated PostViewModel to be Injected by DaggerHilt.
 * Switched to StateFlow to load and view Posts
 * Improved encapsulation by making Mutable private while exposing StateFlow.
+*
+* Navigation Added to the ViewModel to help cleaner architecture.
+*
+*
 * */
 
 @HiltViewModel

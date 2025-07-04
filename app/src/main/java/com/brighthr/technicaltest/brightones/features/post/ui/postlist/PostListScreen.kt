@@ -11,6 +11,15 @@ import androidx.navigation.NavController
 import com.brighthr.technicaltest.brightones.features.post.ui.postlist.component.PostListView
 import com.brighthr.technicaltest.brightones.features.post.viewmodel.PostViewModel
 
+
+/*
+*
+* PostListScreen renamed and broken down into smaller components to make testing and readability
+* better. Also added DaggerHilt for the ViewModel to be Injected it was being instantiated which is
+* not a good approach.
+*
+* */
+
 @Composable
 fun PostScreen(
     modifier: Modifier = Modifier,

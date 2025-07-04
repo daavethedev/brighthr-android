@@ -15,6 +15,13 @@ import androidx.compose.ui.unit.dp
 import com.brighthr.technicaltest.brightones.features.post.model.Post
 import com.brighthr.technicaltest.brightones.features.post.ui.postlist.reusable.PostItemView
 
+
+/*
+*
+* The PostListView was added to improve readability.
+*
+* */
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PostListView(modifier: Modifier = Modifier, posts: List<Post>, onPostClick: (Int) -> Unit) {

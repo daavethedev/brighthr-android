@@ -9,6 +9,14 @@ import androidx.navigation.compose.composable
 import com.brighthr.technicaltest.brightones.features.post.ui.postdetails.PostDetailsScreen
 import com.brighthr.technicaltest.brightones.features.post.ui.postlist.PostScreen
 
+
+/*
+*
+* NavGraph was added to clean up Navigation as it was initially placed in the MainActivity.
+* Doing so will help us find a break point easily.
+*
+* */
+
 @Composable
 fun NavGraph(navController: NavHostController) {
     NavHost(

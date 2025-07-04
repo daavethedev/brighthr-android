@@ -12,6 +12,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.brighthr.technicaltest.brightones.features.post.model.Post
 
+
+/*
+*
+* A new package was added for a view that can be reused.
+*
+* */
+
 @Composable
 fun PostItemView(
     post: Post,

@@ -20,6 +20,13 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.brighthr.technicaltest.brightones.features.post.viewmodel.PostViewModel
 
+/*
+*
+* Created PostDetailsScreen to show the user the complete contents of a post, pretty basic with
+* a header and the post body.
+*
+* */
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PostDetailsScreen(
