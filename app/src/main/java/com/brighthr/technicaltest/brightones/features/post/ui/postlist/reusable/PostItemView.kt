@@ -15,12 +15,12 @@ import com.brighthr.technicaltest.brightones.features.post.model.Post
 @Composable
 fun PostItemView(
     post: Post,
-    onPostClick: () -> Unit
+    onPostClick: (Int) -> Unit
 ) {
     Column(
         verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = Modifier
-            .clickable { onPostClick() }
+            .clickable { onPostClick(post.id) }
             .fillMaxWidth()
             .padding(horizontal = 16.dp)
     ) {

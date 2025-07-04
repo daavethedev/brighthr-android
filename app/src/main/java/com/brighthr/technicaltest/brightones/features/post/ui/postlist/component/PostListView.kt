@@ -16,7 +16,7 @@ import com.brighthr.technicaltest.brightones.features.post.ui.postlist.reusable.
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun PostListView(modifier: Modifier = Modifier, posts: List<Post>, onPostClick: () -> Unit) {
+fun PostListView(modifier: Modifier = Modifier, posts: List<Post>, onPostClick: (Int) -> Unit) {
     Scaffold(
         modifier = modifier, topBar = {
             TopAppBar(title = { Text(text = "Posts") })

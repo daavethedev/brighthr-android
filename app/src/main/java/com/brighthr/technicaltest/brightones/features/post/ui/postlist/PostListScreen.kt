@@ -16,21 +16,22 @@ fun PostScreen(
     navController: NavController,
     viewModel: PostViewModel = hiltViewModel(),
 ) {
-
     val posts by viewModel.posts.collectAsState()
-    val navigateToDetails by viewModel.navigateToDetails.collectAsState()
+    val postToNavigateTo by viewModel.navigateToDetails.collectAsState()
 
     LaunchedEffect(Unit) {
-        viewModel.loadPost()
+        viewModel.loadPosts()
     }
 
-    LaunchedEffect(navigateToDetails) {
-        if (navigateToDetails) {
-            navController.navigate("PostDetails")
+    LaunchedEffect(postToNavigateTo) {
+        if (postToNavigateTo != 0) {
+            navController.navigate("PostDetails/$postToNavigateTo")
             viewModel.onNavigated()
         }
     }
 
     PostListView(
-        modifier = modifier, posts = posts, onPostClick = { viewModel.navigateToDetails() })
+        modifier = modifier, posts = posts, onPostClick = { clickedPostId ->
+            viewModel.navigateToDetails(clickedPostId)
+        })
 }

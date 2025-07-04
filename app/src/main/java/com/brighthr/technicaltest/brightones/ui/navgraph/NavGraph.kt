@@ -12,15 +12,15 @@ import com.brighthr.technicaltest.brightones.features.post.ui.postlist.PostScree
 @Composable
 fun NavGraph(navController: NavHostController) {
     NavHost(
-        navController = navController,
-        startDestination = "PostList"
+        navController = navController, startDestination = "PostList"
     ) {
         composable(route = "PostList") {
             PostScreen(modifier = Modifier.fillMaxSize(), navController = navController)
         }
 
-        composable(route = "PostDetails") {
-            PostDetailsScreen(modifier = Modifier.fillMaxSize(), navController = navController)
+        composable(route = "PostDetails/{postId}") { navBackStackEntry ->
+            val postId = navBackStackEntry.arguments?.getString("postId")?.toIntOrNull() ?: 0
+            PostDetailsScreen(modifier = Modifier.fillMaxSize(), postId = postId)
         }
     }
 }
