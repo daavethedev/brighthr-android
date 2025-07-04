@@ -3,6 +3,7 @@ package com.brighthr.technicaltest.brightones.features.post.ui.postlist.componen
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
@@ -21,16 +22,14 @@ fun PostListView(modifier: Modifier = Modifier, posts: List<Post>, onPostClick: 
         modifier = modifier, topBar = {
             TopAppBar(title = { Text(text = "Posts") })
         }) { padding ->
-        Column(
+        LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
         ) {
-            posts.forEach { post ->
-                if (post.body != null) {
-                    PostItemView(post = post, onPostClick = onPostClick)
-                    HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
-                }
+            items(posts.size) { i  ->
+                PostItemView(post = posts[i], onPostClick = onPostClick)
+                HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
             }
         }
     }

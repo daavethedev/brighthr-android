@@ -1,5 +1,6 @@
 package com.brighthr.technicaltest.brightones.features.post.ui.postlist
 
+import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -20,6 +21,7 @@ fun PostScreen(
     val postToNavigateTo by viewModel.navigateToDetails.collectAsState()
 
     LaunchedEffect(Unit) {
+        Log.i("mytag", "Loading posts...")
         viewModel.loadPosts()
     }
 
