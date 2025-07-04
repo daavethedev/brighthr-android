@@ -17,7 +17,6 @@ import com.brighthr.technicaltest.brightones.ui.theme.BrightonesTheme
  * in order to complete this tech task.
  */
 class MainActivity : ComponentActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

@@ -21,5 +21,4 @@ class PostRepository {
     suspend fun retrieveAllPosts(): List<Post> {
         return retrofit.create(PostService::class.java).retrieveAllPosts()
     }
-
 }
