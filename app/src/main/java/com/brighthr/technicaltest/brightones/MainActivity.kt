@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.brighthr.technicaltest.brightones.features.post.ui.screen.component.PostScreen
+import com.brighthr.technicaltest.brightones.features.post.ui.screen.PostScreen
 import com.brighthr.technicaltest.brightones.ui.theme.BrightonesTheme
 
 /**
