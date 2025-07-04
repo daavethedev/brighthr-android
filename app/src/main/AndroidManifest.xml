@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!--    Application class added and mentioned in th name field.-->
+    <!--    Data Extraction Rules was only updated to remove a TODOO Tag.-->
+
     <application
         android:name=".BrightHR"
         android:allowBackup="true"

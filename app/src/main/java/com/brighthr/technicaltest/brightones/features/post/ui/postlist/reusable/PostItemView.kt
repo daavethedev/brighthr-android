@@ -12,15 +12,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.brighthr.technicaltest.brightones.features.post.model.Post
 
+
+/*
+*
+* A new package was added for a view that can be reused.
+*
+* */
+
 @Composable
 fun PostItemView(
     post: Post,
-    onPostClick: () -> Unit
+    onPostClick: (Int) -> Unit
 ) {
     Column(
         verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = Modifier
-            .clickable { onPostClick() }
+            .clickable { onPostClick(post.id) }
             .fillMaxWidth()
             .padding(horizontal = 16.dp)
     ) {

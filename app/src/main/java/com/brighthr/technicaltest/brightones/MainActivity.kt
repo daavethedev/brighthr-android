@@ -35,13 +35,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    @Composable
-    fun MainNavigation() {
-        val navHostController = rememberNavController()
-        NavHost(navController = navHostController, startDestination = "post") {
-            composable(route = "post") {
-                PostScreen(modifier = Modifier.fillMaxSize(), navController = navHostController)
-            }
-        }
-    }
+
+    // removed MainNavigation fun, moved it to a separate file.
+    // Doing so make it easier to maintain your routes.
 }

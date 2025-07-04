@@ -9,18 +9,26 @@ import androidx.navigation.compose.composable
 import com.brighthr.technicaltest.brightones.features.post.ui.postdetails.PostDetailsScreen
 import com.brighthr.technicaltest.brightones.features.post.ui.postlist.PostScreen
 
+
+/*
+*
+* NavGraph was added to clean up Navigation as it was initially placed in the MainActivity.
+* Doing so will help us find a break point easily.
+*
+* */
+
 @Composable
 fun NavGraph(navController: NavHostController) {
     NavHost(
-        navController = navController,
-        startDestination = "PostList"
+        navController = navController, startDestination = "PostList"
     ) {
         composable(route = "PostList") {
             PostScreen(modifier = Modifier.fillMaxSize(), navController = navController)
         }
 
-        composable(route = "PostDetails") {
-            PostDetailsScreen(modifier = Modifier.fillMaxSize(), navController = navController)
+        composable(route = "PostDetails/{postId}") { navBackStackEntry ->
+            val postId = navBackStackEntry.arguments?.getString("postId")?.toIntOrNull() ?: 0
+            PostDetailsScreen(modifier = Modifier.fillMaxSize(), postId = postId)
         }
     }
 }

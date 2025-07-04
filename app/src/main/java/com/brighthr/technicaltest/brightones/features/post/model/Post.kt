@@ -1,10 +1,17 @@
 package com.brighthr.technicaltest.brightones.features.post.model
 
+/*
+*
+* A bit skeptical about this but added default values to all params to help create a default object
+* that will help with ViewModel Data Keeping.
+*
+* */
+
 class Post(
-    val id: Int,
-    val userId: Int,
-    val title: String,
-    val body: String?
+    val id: Int = 0,
+    val userId: Int = 0,
+    val title: String = "",
+    val body: String? = ""
 ) {
 
     override fun equals(other: Any?): Boolean {

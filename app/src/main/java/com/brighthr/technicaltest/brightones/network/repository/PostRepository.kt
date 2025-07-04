@@ -3,7 +3,14 @@ package com.brighthr.technicaltest.brightones.network.repository
 import com.brighthr.technicaltest.brightones.features.post.model.Post
 import javax.inject.Inject
 
-class PostRepository @Inject constructor(
+/*
+*
+* Injection for PostService was added.
+*
+* */
+
+
+open class PostRepository @Inject constructor(
     private val postService: PostService
 ) {
 
