@@ -1,4 +1,4 @@
-package com.brighthr.technicaltest.brightones.features.post.ui.screen.reusable
+package com.brighthr.technicaltest.brightones.features.post.ui.postlist.reusable
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

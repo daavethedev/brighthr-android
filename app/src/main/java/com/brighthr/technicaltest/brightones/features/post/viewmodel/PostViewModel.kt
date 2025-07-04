@@ -25,6 +25,9 @@ class PostViewModel @Inject constructor(
     private val _posts = MutableStateFlow<List<Post>>(emptyList())
     val posts: StateFlow<List<Post>> = _posts
 
+    private val _navigateToDetails = MutableStateFlow(false)
+    val navigateToDetails: StateFlow<Boolean> = _navigateToDetails
+
     fun loadPost() {
         viewModelScope.launch {
             val result = postRepository.retrieveAllPosts()
@@ -34,5 +37,14 @@ class PostViewModel @Inject constructor(
 
     // TODO : Navigation to be implemented.
     fun navigateToDetails() {
+        viewModelScope.launch {
+            _navigateToDetails.emit(true)
+        }
+    }
+
+    fun onNavigated() {
+        viewModelScope.launch {
+            _navigateToDetails.emit(false)
+        }
     }
 }

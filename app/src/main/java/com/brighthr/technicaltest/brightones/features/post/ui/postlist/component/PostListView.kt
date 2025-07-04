@@ -1,4 +1,4 @@
-package com.brighthr.technicaltest.brightones.features.post.ui.screen.component
+package com.brighthr.technicaltest.brightones.features.post.ui.postlist.component
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.brighthr.technicaltest.brightones.features.post.model.Post
-import com.brighthr.technicaltest.brightones.features.post.ui.screen.reusable.PostItemView
+import com.brighthr.technicaltest.brightones.features.post.ui.postlist.reusable.PostItemView
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
