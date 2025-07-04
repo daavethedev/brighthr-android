@@ -51,7 +51,7 @@ android {
 }
 
 dependencies {
-
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation("androidx.core:core-ktx:1.16.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.1")
     implementation("androidx.activity:activity-compose:1.10.1")
@@ -68,7 +68,6 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.56.2")
     implementation("androidx.hilt:hilt-navigation-fragment:1.2.0")
     ksp("com.google.dagger:hilt-android-compiler:2.56.2")
-
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")

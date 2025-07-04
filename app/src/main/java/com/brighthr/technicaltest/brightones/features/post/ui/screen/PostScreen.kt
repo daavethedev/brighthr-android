@@ -17,14 +17,14 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.brighthr.technicaltest.brightones.features.post.model.Post
 import com.brighthr.technicaltest.brightones.features.post.viewmodel.PostViewModel
-
 
 @Composable
 fun PostScreen(
     modifier: Modifier = Modifier,
-    viewModel: PostViewModel = PostViewModel(),
+    viewModel: PostViewModel = hiltViewModel(),
 ) {
 
     val posts by viewModel.posts.collectAsState()
@@ -66,7 +66,7 @@ fun PostView(
 fun PostView(post: Post, postViewModel: PostViewModel) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier
         .clickable {
-            postViewModel.navigateToDetail()
+            postViewModel.navigateToDetails()
         }
         .fillMaxWidth()
         .padding(horizontal = 16.dp)) {

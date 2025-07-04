@@ -32,6 +32,6 @@ class PostViewModel @Inject constructor(
     }
 
     // TODO : Navigation to be implemented.
-    fun onPostClicked() {
+    fun navigateToDetails() {
     }
 }
