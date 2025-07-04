@@ -10,7 +10,7 @@ import com.brighthr.technicaltest.brightones.features.post.ui.postlist.reusable.
 import org.junit.Rule
 import org.junit.Test
 
-class PostListViewTest {
+class ComposeUITest {
 
     @get:Rule
     val composeTestRule = createComposeRule()
