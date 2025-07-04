@@ -16,6 +16,7 @@ import javax.inject.Inject
 * Switched to StateFlow to load and view Posts
 * Improved encapsulation by making Mutable private while exposing StateFlow.
 * */
+
 @HiltViewModel
 class PostViewModel @Inject constructor(
     private val postRepository: PostRepository
